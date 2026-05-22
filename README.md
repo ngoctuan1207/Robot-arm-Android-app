@@ -4,7 +4,6 @@
 The application communicates with the robot controller via Wi-Fi using the ESP32 chip. In access point mode, the ESP32 creates a dedicated wireless network to which the tablet connects, enabling data exchange through the TCP/IP protocol. Control commands, including joint angles, velocities, and accelerations, are transmitted to the controller, while joint position feedback is received in JSON format.
 
 ## Technical Specifications
-
 ### Android & Java Environment
 * **Minimum Android Version:** Android 9.0 (API Level 28 / Pie)
 * **Target Android Version:** Android 15 (API Level 35 / Vanilla Ice Cream)
@@ -18,7 +17,7 @@ To interact with the hardware and manage connections, the application requires t
 * `ACCESS_FINE_LOCATION` & `ACCESS_COARSE_LOCATION`: Required by Android system specifications to scan and discover nearby Wi-Fi networks.
 * `READ_EXTERNAL_STORAGE` & `WRITE_EXTERNAL_STORAGE`: Allows the app to read and write data to device storage (e.g., saving configurations or logs).
 ---
-## Key & Advanced Features
+## Key Features
 * **TCP/IP Socket Communication:** Handles stable, low-latency, wireless data transmission between the mobile interface and the ESP32 control board.
 * **Virtual Joystick Integration:** Embedded standard virtual joystick inputs for intuitive, real-time manual manual maneuvering of the robotic arm.
 * **JSON Data Parsing (GSON):** Streamlines data serialization and deserialization, converting continuous telemetry streams from the hardware into readable formats.
@@ -69,6 +68,37 @@ Before building the application, ensure you have the following installed and con
    * Enable **USB Debugging** on your physical Android device (Android 9.0+).
    * Connect your device to your computer via USB.
    * Select your device from the target device dropdown in Android Studio and click **Run** (Play icon).
+  ## 📱 Android Teach Pendant Application
+
+This repository includes a dedicated Android application developed using **Android Studio** and **Kotlin**. It serves as a digital Teach Pendant to control and monitor the 6-DOF robot arm in real time.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/YOUR_IMAGE_HASH.jpg" width="70%" alt="Android Application UI"/>
+</p>
+
+### ⚙️ How It Works
+* **Wireless Communication:** The application establishes a bidirectional connection with the robot controller via **Wi-Fi**. 
+* **Command Transmission:** It packs and transmits motion control commands—including target joint angles, velocities, and accelerations—directly to the controller.
+* **Real-time Feedback:** The app continuously receives joint position feedback from the robot in **JSON format**.
+* **Live Kinematics Computation:** Utilizing the incoming joint data, the application calculates the Tool Center Point (TCP) position and orientation ($X, Y, Z, EX, EY, EZ$) in real time.
+
+---
+### Key App Functions
+
+#### 1. Real-time Monitoring & Configuration
+* **Live Telemetry Display:** Displays real-time data for individual joint positions ($J_1 \rightarrow J_6$) and the calculated TCP pose.
+* **Coordinate System Selection:** Allows users to easily switch the reference coordinate system (e.g., *Base*) for kinematic calculations.
+* **Work Object Management:** Supports selecting different work objects (e.g., *Wobj0*) to dynamically redefine the coordinate origin.
+
+#### 2. Motion Control & Navigation
+* **Dual On-Screen Joysticks:** Features two intuitive joysticks for manual 3D jog control.
+* **Jog Speed Adjustment:** Includes a slider to dynamically scale the robot's jogging speed from 0% to 100%.
+* **Home Position Return:** A dedicated **Home** button quickly commands the robot arm to return to its default calibration position.
+* **Multiple Motion Modes:** Supports joint jogging for specific groups (Joints 1–3 and Joints 4–6), as well as simultaneous 6-joint control in either **Angle Mode** or **Position Mode** *(Linear motion and tool reorientation are currently under development)*.
+
+#### 3. Industrial Safety Features
+* **Deadman Switch (Enable Button):** As a core safety measure, the robot motion can only be initiated and maintained while the **Enable** button is actively pressed and held. Releasing the button stops the movement immediately.
+* **Emergency Stop (E-STOP):** A prominent, easily accessible **E-STOP** button that instantly halts the entire robot system operation in emergency situations.
 
 
 
