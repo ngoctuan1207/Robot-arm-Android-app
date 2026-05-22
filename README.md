@@ -68,16 +68,14 @@ Before building the application, ensure you have the following installed and con
    * Enable **USB Debugging** on your physical Android device (Android 9.0+).
    * Connect your device to your computer via USB.
    * Select your device from the target device dropdown in Android Studio and click **Run** (Play icon).
-  ## 📱 Android Teach Pendant Application
-
-This repository includes a dedicated Android application developed using **Android Studio** and **Kotlin**. It serves as a digital Teach Pendant to control and monitor the 6-DOF robot arm in real time.
-
+     
+## Android Teach Pendant Application
 <p align="center">
 <img width="2560" height="1568" alt="Android_app" src="https://github.com/user-attachments/assets/fde9c6ec-1336-4a49-b3d6-2c931b80fd42" />
 </p>
 
-### ⚙️ How It Works
-* **Wireless Communication:** The application establishes a bidirectional connection with the robot controller via **Wi-Fi**. 
+### How It Works
+* **Wireless Communication:** The application establishes a bidirectional connection with the robot controller via **Wi-Fi** of ESP32 access point mode. 
 * **Command Transmission:** It packs and transmits motion control commands—including target joint angles, velocities, and accelerations—directly to the controller.
 * **Real-time Feedback:** The app continuously receives joint position feedback from the robot in **JSON format**.
 * **Live Kinematics Computation:** Utilizing the incoming joint data, the application calculates the Tool Center Point (TCP) position and orientation ($X, Y, Z, EX, EY, EZ$) in real time.
