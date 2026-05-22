@@ -26,7 +26,9 @@ To interact with the hardware and manage connections, the application requires t
 ## Software Architecture
 The application core logic is organized under the `com.example.RobotArm` package. Below is an overview of the key classes and their responsibilities:
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4ab546ea-9e40-4953-b17b-95d76d427fe6" alt="Screenshot 2026-05-22 161112" width="679" height="484">
+<img width="2560" height="1568" alt="Android_app" src="https://github.com/user-attachments/assets/fde9c6ec-1336-4a49-b3d6-2c931b80fd42" />
+<img width="2560" height="1568" alt="Android_app" src="https://github.com/user-attachments/assets/9b7544ed-fefb-49d0-a962-c9b14ee1e34a" />
+
 </p>
 
 | Class / Component | Description |
@@ -73,7 +75,7 @@ Before building the application, ensure you have the following installed and con
 This repository includes a dedicated Android application developed using **Android Studio** and **Kotlin**. It serves as a digital Teach Pendant to control and monitor the 6-DOF robot arm in real time.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/YOUR_IMAGE_HASH.jpg" width="70%" alt="Android Application UI"/>
+<img width="2560" height="1568" alt="Android_app" src="https://github.com/user-attachments/assets/49f632a5-4429-40de-9bdd-60c28e5671f2" />
 </p>
 
 ### ⚙️ How It Works
