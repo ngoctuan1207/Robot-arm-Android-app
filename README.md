@@ -42,6 +42,35 @@ The application core logic is organized under the `com.example.RobotArm` package
 | **`RobotModel.kt`** | Stores the physical parameters and dimensions of the robot, including its **Denavit–Hartenberg (DH) table**. |
 | **`SpinnerUtils.kt`** | A utility class providing helper functions to manage UI spinner components effectively. |
 
+## Getting Started
+
+Follow these instructions to get a local copy of the project up and running, and to understand how to connect it to your robot hardware.
+
+### Prerequisites
+
+Before building the application, ensure you have the following installed and configured:
+* **Android Studio:** Ladybug (2024.2.1) or newer recommended.
+* **Android SDK:** API Level 35 (Android 15).
+* **Hardware:** A 6-DOF Robotic Arm controlled by an ESP32 microcontroller configured in **Access Point (AP) Mode**.
+
+### Installation & Build
+
+1. **Clone the Repository:**
+
+2. **Open the Project:**
+   * Launch Android Studio.
+   * Select **Open An Existing Project** and navigate to the cloned `RobotArm_app` directory.
+
+3. **Sync and Build:**
+   * Allow Android Studio to automatically sync the Gradle files and download the required dependencies (`GSON`, `Virtual Joystick`, etc.).
+   * Click the **Make Project** (Hammer icon) to verify there are no compilation errors.
+
+4. **Run the Application:**
+   * Enable **USB Debugging** on your physical Android device (Android 9.0+).
+   * Connect your device to your computer via USB.
+   * Select your device from the target device dropdown in Android Studio and click **Run** (Play icon).
+
+
 
 
 
