@@ -29,6 +29,7 @@ The application core logic is organized under the `com.example.RobotArm` package
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4ab546ea-9e40-4953-b17b-95d76d427fe6" alt="Screenshot 2026-05-22 161112" width="679" height="484">
 </p>
+
 | Class / Component | Description |
 | :--- | :--- |
 | **`MainActivity`** | The core application lifecycle manager. It handles the user interface (UI) and processes direct user interactions. |
