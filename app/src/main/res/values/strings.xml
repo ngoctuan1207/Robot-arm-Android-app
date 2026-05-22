@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TestJoyStick</string>
+
+    <string-array name="JogMode">
+        <item>Joint 1, 2, 3</item>
+        <item>Joint 4, 5, 6</item>
+        <item>Linear</item>
+        <item>Reorient</item>
+        <item>Calibrate</item>
+        <item>Angle</item>
+        <item>Position</item>
+    </string-array>
+
+    <string-array name="CoorSys">
+        <item>Base</item>
+        <item>Tool</item>
+    </string-array>
+
+    <string-array name="Wobj">
+        <item>Wobj0</item>
+    </string-array>
+</resources>

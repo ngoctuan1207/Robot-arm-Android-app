@@ -1,0 +1,17 @@
+{
+  "command": "0x10",
+  "mode": "0x0C",
+  "enable": 1,
+  "chunk_id": 1,
+  "total_chunks": 4,
+
+  "control": {
+    "speed": 50.0,
+    "acceleration": 10.0
+  },
+  "trajectory": [
+    { "joints": [0, -130.99, -100.55, -50.22, 0.00, 0.00, 0.00] },
+    { "joints": [0, -129.00, -101.10, -49.80, 0.00, 0.00, 0.00] }
+  ]
+}
+

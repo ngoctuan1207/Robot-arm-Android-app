@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <size android:width="200dp" android:height="40dp"/>
+            <solid android:color="@color/Blue"/>  <!-- màu nền khi chọn -->
+            <corners android:radius="6dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="160dp" android:height="40dp"/>
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="6dp"/>
+        </shape>
+    </item>
+</selector>
